@@ -8,10 +8,10 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/suprabhatghosh1706-lab/flask-cicd-project'
-            }
-        }
+    		steps {
+       			 git branch: 'main', url: 'https://github.com/suprabhatghosh1706-lab/flask-cicd-project'
+   		 }
+	}
 
         stage('Build Docker Image') {
             steps {
